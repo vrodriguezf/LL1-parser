@@ -1,5 +1,5 @@
-E -> TX
-X -> +TX | @
-T -> FY
-Y -> *FY | @
-F -> (E) | a
+S -> X | A S | ""
+X -> S a
+A -> a Z | Y
+Y -> A b
+Z -> A | c 

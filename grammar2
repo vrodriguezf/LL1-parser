@@ -1,7 +1,5 @@
-P -> bSe
-S -> AR
-R -> AR | @
-A -> a=E;
-E -> FT
-T -> +FT | @
-F -> (E) | a | r
+S -> A S X | X
+X -> a X | ""
+A -> a Z
+Z -> A Y | c Y
+Y -> b Y | ""
