@@ -1,5 +1,3 @@
-S -> A S X | X
-X -> a X | ""
-A -> a Z
-Z -> A Y | c Y
-Y -> b Y | ""
+S -> a X | ""
+X -> a X | c Y | ""
+Y -> b Y | a X | ""

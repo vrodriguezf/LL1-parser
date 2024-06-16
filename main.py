@@ -295,7 +295,6 @@ def main(grammar_file, positive_tests=None, negative_tests=None):
     # g = CFG(terminals={'a', 'b', 'c', 'λ'},
     #     rules={'S': ['aSa', 'bSb', 'cSc', 'λ']}
     #     )
-
     # Turn the list of rules into a dictionary for cfg
     rules_dict = {}
     for rule in rules:
@@ -338,6 +337,8 @@ def main(grammar_file, positive_tests=None, negative_tests=None):
             n_strings_for_show["Is Accepted"].append(g.cyk(n_string))
         n_strings_df = pd.DataFrame(n_strings_for_show)
         print(f"Negative Tests:\n{tabulate(n_strings_df, headers='keys', tablefmt='fancy_grid')}\n")
+
+    print(f'Does the grammar accept the null string? {g.accepts_null}')
 
 if __name__ == "__main__":
     if len(sys.argv) < 2 or len(sys.argv) > 4:
